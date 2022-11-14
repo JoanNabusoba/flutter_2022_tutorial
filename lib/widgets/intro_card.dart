@@ -19,7 +19,7 @@ class IntroCard extends StatelessWidget {
       onTap: onClick,
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.22,
+        height: MediaQuery.of(context).size.height * 0.12,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(img),

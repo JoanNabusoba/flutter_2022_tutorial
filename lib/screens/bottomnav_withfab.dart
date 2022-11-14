@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'sliver_demo.dart';
 
 class BottomnavWithFab extends StatelessWidget {
   const BottomnavWithFab({super.key});
@@ -22,6 +25,7 @@ class BottomnavWithFab extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+
             //DESCRIPTION TEXT
             Text("Bottom Navigation abr can be used to showcase quick menu"),
           ],
@@ -47,11 +51,25 @@ class BottomnavWithFab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.max,
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.menu,
-                color: Colors.white,
+            InkWell(
+              onTap: () {
+                Get.to(() => SliverDemo());
+              },
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    "Home",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
               ),
             ),
             IconButton(

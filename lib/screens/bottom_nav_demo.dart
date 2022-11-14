@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'sliver_demo.dart';
 
 class BottomNavbarDemo extends StatelessWidget {
   const BottomNavbarDemo({super.key});
@@ -22,8 +25,28 @@ class BottomNavbarDemo extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
+
             //DESCRIPTION TEXT
             Text("Bottom Navigation abr can be used to showcase quick menu"),
+            SizedBox(
+              height: 30,
+            ),
+            ListTile(
+              leading: Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("images/forestbg.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+              ),
+              title: Text("Rumba Japani"),
+              subtitle: Text("By Sautisol"),
+              trailing: Text("3:21"),
+            ),
           ],
         ),
       ),
@@ -38,6 +61,14 @@ class BottomNavbarDemo extends StatelessWidget {
         unselectedFontSize: 14,
         onTap: (value) {
           //Respond to item press.
+          if (value == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SliverDemo()),
+            );
+          } else if (value == 1) {
+            Get.to(() => SliverDemo());
+          }
         },
         items: [
           BottomNavigationBarItem(

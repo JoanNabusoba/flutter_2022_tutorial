@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter/screens/bottom_nav_demo.dart';
-import 'package:my_first_flutter/screens/bottomnav_withfab.dart';
-import 'package:my_first_flutter/screens/form_ex.dart';
-import 'package:my_first_flutter/screens/home_page.dart';
-import 'package:my_first_flutter/screens/sliver_demo.dart';
-import 'package:my_first_flutter/widgets/intro_card.dart';
+import 'package:get/get.dart';
+
+import '../widgets/intro_card.dart';
+import 'bottom_nav_demo.dart';
+import 'bottomnav_withfab.dart';
+import 'form_ex.dart';
+import 'home_page.dart';
+import 'intro_login.dart';
+import 'sliver_demo.dart';
 
 class Intro extends StatelessWidget {
-  const Intro({Key? key}) : super(key: key);
+  const Intro({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +30,7 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Basic Widgets"),
+
               SizedBox(
                 height: 25,
               ),
@@ -71,6 +75,16 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Sliver Appbar example"),
+              SizedBox(
+                height: 25,
+              ),
+              //SIXTH CONTAINER
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => IntroLogin());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Intrologin example"),
             ],
           ),
         ),
