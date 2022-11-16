@@ -7,6 +7,7 @@ import '../widgets/intro_card.dart';
 import 'bottom_nav_demo.dart';
 import 'bottomnav_withfab.dart';
 import 'dashboard3.dart';
+import 'dashboard4.dart';
 import 'form_ex.dart';
 import 'home_page.dart';
 import 'intro_login.dart';
@@ -141,6 +142,16 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Dashboard design 3"),
+              //ELEVENTH CONTAINER
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => DashBoard4());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Dashboard design 4"),
             ],
           ),
         ),
