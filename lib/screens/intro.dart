@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_first_flutter/screens/shop_design1.dart';
+import 'package:my_first_flutter/screens/shop_design2.dart';
 
 import '../widgets/intro_card.dart';
 import 'bottom_nav_demo.dart';
@@ -10,6 +11,7 @@ import 'home_page.dart';
 import 'intro_login.dart';
 import 'multiple_scroll.dart';
 import 'onboard_ex.dart';
+import 'shop_design2-onboard.dart';
 import 'sliver_demo.dart';
 
 class Intro extends StatelessWidget {
@@ -118,6 +120,16 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Shop Design 1"),
+              //ninth CONTAINER
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => ShopDesign2Onboard());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Shop Design 2"),
             ],
           ),
         ),
