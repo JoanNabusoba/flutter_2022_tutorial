@@ -6,6 +6,7 @@ import 'package:my_first_flutter/screens/shop_design2.dart';
 import '../widgets/intro_card.dart';
 import 'bottom_nav_demo.dart';
 import 'bottomnav_withfab.dart';
+import 'dashboard3.dart';
 import 'form_ex.dart';
 import 'home_page.dart';
 import 'intro_login.dart';
@@ -130,6 +131,16 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Shop Design 2"),
+              //TENTH CONTAINER
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => DashBoard3());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Dashboard design 3"),
             ],
           ),
         ),
