@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_first_flutter/screens/shop_design1.dart';
 
 import '../widgets/intro_card.dart';
 import 'bottom_nav_demo.dart';
@@ -107,23 +108,16 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Dashboard with multiple scroll"),
-
-              // TextField(
-              //   decoration: new InputDecoration(
-              //     prefixIcon: Icon(Icons.search),
-              //     labelText: "Search...",
-              //     enabledBorder: const OutlineInputBorder(
-              //       borderRadius: BorderRadius.all(Radius.circular(20.0)),
-              //       borderSide: const BorderSide(
-              //         color: Colors.grey,
-              //       ),
-              //     ),
-              //     focusedBorder: OutlineInputBorder(
-              //       borderRadius: BorderRadius.all(Radius.circular(10.0)),
-              //       borderSide: BorderSide(color: Colors.blue),
-              //     ),
-              //   ),
-              // ),
+              //EIGHTH CONTAINER
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => ShopDesign1());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Shop Design 1"),
             ],
           ),
         ),
