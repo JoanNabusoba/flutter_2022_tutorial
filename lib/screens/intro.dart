@@ -7,6 +7,8 @@ import 'bottomnav_withfab.dart';
 import 'form_ex.dart';
 import 'home_page.dart';
 import 'intro_login.dart';
+import 'multiple_scroll.dart';
+import 'onboard_ex.dart';
 import 'sliver_demo.dart';
 
 class Intro extends StatelessWidget {
@@ -85,6 +87,43 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Intrologin example"),
+              //SEVENTH CONTAINER
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => OnboardExample());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Onboarding example"),
+              //SEVENTH CONTAINER
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => MultipleScroll());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "Dashboard with multiple scroll"),
+
+              // TextField(
+              //   decoration: new InputDecoration(
+              //     prefixIcon: Icon(Icons.search),
+              //     labelText: "Search...",
+              //     enabledBorder: const OutlineInputBorder(
+              //       borderRadius: BorderRadius.all(Radius.circular(20.0)),
+              //       borderSide: const BorderSide(
+              //         color: Colors.grey,
+              //       ),
+              //     ),
+              //     focusedBorder: OutlineInputBorder(
+              //       borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              //       borderSide: BorderSide(color: Colors.blue),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
