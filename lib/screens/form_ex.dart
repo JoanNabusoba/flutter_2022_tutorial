@@ -51,7 +51,6 @@ class _FormExState extends State<FormEx> {
                   labelText: 'E-Mail',
                   prefixIcon: Icon(
                     Icons.call,
-                    color: Colors.red,
                   ),
                 ),
                 keyboardType: TextInputType.emailAddress,
