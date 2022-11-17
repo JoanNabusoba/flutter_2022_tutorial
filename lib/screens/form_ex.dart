@@ -47,7 +47,13 @@ class _FormExState extends State<FormEx> {
                 height: MediaQuery.of(context).size.width * 0.1,
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'E-Mail'),
+                decoration: InputDecoration(
+                  labelText: 'E-Mail',
+                  prefixIcon: Icon(
+                    Icons.call,
+                    color: Colors.red,
+                  ),
+                ),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {
                   //Validator
@@ -67,7 +73,10 @@ class _FormExState extends State<FormEx> {
               ),
               //text input
               TextFormField(
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  suffixIcon: Icon(Icons.lock),
+                ),
                 keyboardType: TextInputType.emailAddress,
                 onFieldSubmitted: (value) {},
                 obscureText: true,

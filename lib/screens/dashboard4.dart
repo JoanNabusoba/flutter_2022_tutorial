@@ -111,6 +111,26 @@ class DashBoard4 extends StatelessWidget {
                       )),
                     ],
                   ),
+                  //third row
+                  Row(
+                    children: [
+                      Expanded(
+                          child: Dashboard4Card(
+                        onPressed: () {},
+                        title: "Washdays",
+                        img: "images/salad.png",
+                      )),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                          child: Dashboard4Card(
+                        onPressed: () {},
+                        title: "Perm",
+                        img: "images/salad.png",
+                      )),
+                    ],
+                  ),
                 ],
               ),
             ),
