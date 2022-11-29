@@ -62,22 +62,32 @@ class BottomNavbarDemo extends StatelessWidget {
         onTap: (value) {
           //Respond to item press.
           if (value == 0) {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SliverDemo()),
-            );
+            Get.to(()=> SliverDemo());
           } else if (value == 1) {
+            Get.to(() => SliverDemo());
+          } else if (value == 2) {
+            Get.to(() => SliverDemo());
+          } else if (value == 3) {
             Get.to(() => SliverDemo());
           }
         },
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_outline_outlined), label: "Favourites"),
-          BottomNavigationBarItem(icon: Icon(Icons.music_note), label: "Music"),
+            icon: Icon(Icons.favorite_outline_outlined),
+            label: "Favourites",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_on), label: "Places"),
+            icon: Icon(Icons.music_note),
+            label: "Music",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.library_books), label: "News"),
+            icon: Icon(Icons.location_on),
+            label: "Places",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.library_books),
+            label: "News",
+          ),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_first_flutter/screens/home_page.dart';
 import 'package:my_first_flutter/widgets/shop_card11.dart';
 
 class ShopDesign1 extends StatelessWidget {
@@ -48,6 +49,42 @@ class ShopDesign1 extends StatelessWidget {
               Icons.notifications,
               color: Colors.white,
             ),
+          ),
+          PopupMenuButton(
+            onSelected: (result) {
+              if (result == 0) {
+                Get.to(() => Get.to(MyHomePage()));
+              } else if (result == 1) {
+                Get.to(() => Get.to(MyHomePage()));
+              }
+            },
+            icon: Icon(Icons.more_vert),
+            itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+              const PopupMenuItem(
+                child: ListTile(
+                  leading: Icon(Icons.add),
+                  title: Text('Item 1'),
+                ),
+              ),
+              const PopupMenuItem(
+                value: 0,
+                child: InkWell(
+                  child: ListTile(
+                    leading: Icon(Icons.anchor),
+                    title: Text('Item 2'),
+                  ),
+                ),
+              ),
+              const PopupMenuItem(
+                child: ListTile(
+                  leading: Icon(Icons.article),
+                  title: Text('Item 3'),
+                ),
+              ),
+              const PopupMenuDivider(),
+              const PopupMenuItem(child: Text('Item A')),
+              const PopupMenuItem(child: Text('Item B')),
+            ],
           ),
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_first_flutter/screens/intro_viola.dart';
 import 'package:my_first_flutter/screens/shop_design1.dart';
 import 'package:my_first_flutter/screens/shop_design2.dart';
 
@@ -152,6 +153,15 @@ class Intro extends StatelessWidget {
                   },
                   img: "images/forestbg.jpg",
                   cardTitle: "Dashboard design 4"),
+              SizedBox(
+                height: 25,
+              ),
+              IntroCard(
+                  onClick: () {
+                    Get.to(() => IntroViola());
+                  },
+                  img: "images/forestbg.jpg",
+                  cardTitle: "IntroViola"),
             ],
           ),
         ),
